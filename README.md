@@ -2,7 +2,7 @@
 
 `rwx_shim` is a minimal shim written in Assembly and C that allows users to place variables into a runtime-writable and executable section by linking with this library. It also provides some additional utility to seal the section to at runtime.
 
-This is mostly useful for programs that want to JIT-generate some fixed amount of code at startup, and then execute them without much modification. One example is Linux's [Static Keys](<https://docs.kernel.org/staging/static-keys.html).
+This is mostly useful for programs that want to JIT-generate some fixed amount of code at startup, and then execute them without much modification. One example is Linux's [Static Keys](https://docs.kernel.org/staging/static-keys.html).
 
 Compared to `mmap()` an `rwx` page at runtime, this shim allows users to create variables into an RWX section at link time and provided better debugging experience.
 
